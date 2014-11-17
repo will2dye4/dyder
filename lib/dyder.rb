@@ -5,11 +5,11 @@ require 'uri'
 
 class Dyder
 
-  def self.run(keyword, be_polite)
-    Dyder.new(keyword, be_polite).run
+  def self.run(keyword)
+    Dyder.new(keyword).run
   end
 
-  def initialize(keyword, be_polite, limit=50)
+  def initialize(keyword, be_polite=true, limit=50)
     @keyword = keyword
     @polite = be_polite
     @limit = limit
@@ -53,4 +53,4 @@ class Dyder
 
 end
 
-Dyder.run('Drum_kit', false)
+Dyder.run('Drum_kit')
